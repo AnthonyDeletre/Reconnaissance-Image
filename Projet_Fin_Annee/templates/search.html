@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Résultats</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+<div class="background">
+    <h1 class="titleSearch">Résultats</h1>
+    <hr class="divider">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="mapContainer">
+                <iframe src={{json}} width="1000" height="500" zoom="20" frameborder="0" scrolling="no" class="Map" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="setting">
+        <a href="/">
+            <button type="button" class="btn btnSetting" data-toggle="tooltip" data-placement="top" title="Retour"><i class="fas fa-arrow-left"></i></button>
+        </a>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        function onLoadElement() {
+            $(".setting").fadeIn(3000);
+        }
+
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        onLoadElement();
+    });
+</script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script src="{{ url_for('static', filename='util.js') }}"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ url_for('static', filename='jquery-3.2.1.min.js') }}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap-4.0.0.js') }}"></script>
+</body>
+</html>

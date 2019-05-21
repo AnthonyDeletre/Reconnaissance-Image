@@ -1,0 +1,187 @@
+body, html{
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+h1{
+    font-size: 60px;
+}
+
+form {
+    width: 500px;
+    margin: 0 auto;
+    text-align:center;
+    padding-top: 30px;
+}
+
+.background{
+    height: 100%;
+    background-image: url("bg4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.title{
+    text-align: center;
+    padding-top: 15%;
+}
+
+.titleSearch{
+    text-align: center;
+    padding-top: 4%;
+}
+
+.subTitle{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.homeText{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: -100px;
+    background-color: #fff;
+    box-shadow: 1px 1px 12px #000;
+}
+
+.containerForm{
+    width: 500px;
+}
+
+.settingContainer{
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(210, 36, 16, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.firstName{
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.LastName{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.fileContainer {
+    margin-top: 0px;
+    position: relative;
+    width: 225px;
+}
+.js .fileLabel {
+    display: block;
+    padding: 14px 45px;
+    background: #d22410;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.js .sendLabel {
+    display: block;
+    padding: 14px 30px;
+    background: #fffefe;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.fa-paper-plane{
+    color: #000;
+}
+
+.js .input-file {
+    position: absolute;
+    top: 0; left: 0;
+    width: 300px;
+    opacity: 0;
+    padding: 14px 0;
+    cursor: pointer;
+}
+
+.js .input-submit {
+    position: absolute;
+    width: 80px;
+    opacity: 0;
+    padding: 14px 0px;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+.js .input-file:hover + .fileLabel,
+.js .input-file:focus + .fileLabel,
+.js .fileLabel:hover,
+.js .fileLabel:focus {
+    background: #930d12;
+}
+
+.js .input-submit:hover + .sendLabel,
+.js .input-submit:focus + .sendLabel,
+.js .sendLabel:hover,
+.js .sendLabel:focus {
+    background: #a2a2a2;
+}
+
+.file-return {
+    margin: 0;
+}
+.file-return:not(:empty) {
+    margin: 1em 0;
+}
+.js .file-return {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: bold;
+}
+.js .file-return:not(:empty):before {
+    content: "Fichier sélectionné: ";
+    font-style: normal;
+    font-weight: normal;
+}
+
+.setting{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    border-radius: 30px;
+    background-color: #d22410;
+
+}
+
+.btnSetting{
+    margin-top: -2px;
+    font-size: 25px;
+    color: #fff;
+}
+
+.divider{
+    background-color: #d22410;
+    margin-left: 700px;
+    margin-right: 700px;
+    height: 2px;
+}
+
+.mapContainer{
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    height: 500px;
+    width: 1000px;
+}
+
+.mapContainer iframe{
+    position: absolute;
+    border-radius: 10px;
+}

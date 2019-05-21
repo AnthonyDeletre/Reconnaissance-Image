@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+<div class="background">
+    <h1 class="title">Team</h1>
+    <hr class="divider">
+    <div class="container settingContainer">
+        <div class="row justify-content-center">
+            <div class="col-lg-3">
+                <h2 class="firstName">Delétré</h2>
+                <h3 class="LastName">Anthony</h3>
+            </div>
+            <div class="col-lg-3">
+                <h2 class="firstName">Pellerin</h2>
+                <h3 class="LastName">Matthieu</h3>
+            </div>
+            <div class="col-lg-3">
+                <h2 class="firstName">Chavatte</h2>
+                <h3 class="LastName">Eguinane</h3>
+            </div>
+            <div class="col-lg-3">
+                <h2 class="firstName">Ledieu</h2>
+                <h3 class="LastName">Clément</h3>
+            </div>
+        </div>
+    </div>
+    <div class="setting">
+        <a href="/">
+            <button type="button" class="btn btnSetting" data-toggle="tooltip" data-placement="top" title="Retour"><i class="fas fa-arrow-left"></i></button>
+        </a>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        function onLoadElement() {
+            $(".setting").fadeIn(3000);
+        }
+
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        onLoadElement();
+    });
+</script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script src="{{ url_for('static', filename='util.js') }}"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ url_for('static', filename='jquery-3.2.1.min.js') }}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap-4.0.0.js') }}"></script>
+</body>
+</html>

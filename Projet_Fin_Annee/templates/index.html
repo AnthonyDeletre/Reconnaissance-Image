@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet Fin d'année</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body>
+<div class="background">
+    <h1 class="title">Projet de fin d'année</h1>
+    <hr class="divider">
+    <p class="subTitle" >Ce projet consistre à trouver un lieu à l'aide d'une image !</p>
+    <form action="upload" method="POST" enctype="multipart/form-data">
+        <div class="containerForm d-flex justify-content-center">
+            <div class="form-group fileContainer">
+                <input type="file" name="inputFile" class="input-file">
+                <p class="fileLabel"><i class="fas fa-file-download"></i> Choisir un fichier</p>
+            </div>
+            <div>
+                <input type="submit" class="input-submit" data-toggle="tooltip" data-placement="right" title="Envoyer">
+                <p class="sendLabel"><i class="far fa-paper-plane"></i></p>
+                </input>
+            </div>
+        </div>
+        <p class="file-return"></p>
+    </form>
+
+    <div class="setting">
+        <a href="team">
+            <button type="button" class="btn btnSetting" data-toggle="tooltip" data-placement="top" title="Team"></i><i class="fas fa-users"></i></button>
+        </a>
+    </div>
+</div>
+
+
+<!--
+<div class="container-fluid homeText">
+    <h2 class="text-center">Title</h2>
+    <p class="text-center">Lorememlarpazerpazkprkapz</p>
+</div>
+-->
+<script>
+    $(document).ready(function() {
+        function onLoadElement() {
+            $(".fileContainer").fadeIn(3000);
+            $(".setting").fadeIn(3000);
+        }
+
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip()
+        })
+        onLoadElement();
+    });
+</script>
+<script src="{{ url_for('static', filename='main.js') }}"></script>
+<script src="{{ url_for('static', filename='util.js') }}"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{{ url_for('static', filename='jquery-3.2.1.min.js') }}"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="{{ url_for('static', filename='popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='bootstrap-4.0.0.js') }}"></script>
+</body>
+</html>
